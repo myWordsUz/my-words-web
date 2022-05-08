@@ -1,0 +1,34 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+import { AuthorizationRoutingModule } from './authorization-routing.module';
+import { AuthorizationComponent } from './authorization.component';
+import { SignInComponent } from './sign-in/sign-in.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+
+import { NzFormModule } from 'ng-zorro-antd/form';
+import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
+import { NzGridModule } from 'ng-zorro-antd/grid';
+import { NzSelectModule } from 'ng-zorro-antd/select';
+
+import { ReactiveFormsModule } from '@angular/forms';
+
+@NgModule({
+  declarations: [AuthorizationComponent, SignInComponent, SignUpComponent],
+  imports: [
+    CommonModule,
+    AuthorizationRoutingModule,
+
+    ReactiveFormsModule,
+
+    NzFormModule,
+    NzInputModule,
+    NzButtonModule,
+    NzCheckboxModule,
+    NzGridModule,
+    NzSelectModule,
+  ],
+})
+export class AuthorizationModule {}

@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+.d {
+    &-flex {
+        display: flex;
+    }
+}
+
+.align-items {
+    &-center {
+        align-items: center;
+    }
+}
+
+.h-100vh {
+    height: 100vh;
+}

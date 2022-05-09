@@ -1,16 +1,70 @@
 /* You can add global styles to this file, and also import other style files */
+
+@keyframes fade_in_show {
+  0% {
+    opacity: 0;
+    transform: scale(0)
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+
 .d {
-    &-flex {
-        display: flex;
-    }
+  &-flex {
+    display: flex;
+  }
+}
+
+.flex-direction {
+  &-column {
+    flex-direction: column;
+  }
+}
+
+.flex {
+  &-grow-1 {
+    flex-grow: 1;
+  }
 }
 
 .align-items {
-    &-center {
-        align-items: center;
-    }
+  &-center {
+    align-items: center;
+  }
 }
 
 .h-100vh {
-    height: 100vh;
+  height: 100vh;
+}
+
+.p {
+  &r {
+    &-1 {
+      padding-right: 1rem;
+    }
+
+    &-2 {
+      padding-right: 2rem;
+    }
+  }
+}
+
+.m {
+  &t {
+    &-1 {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.m {
+  &b {
+    &-1 {
+      margin-bottom: 1rem;
+    }
+  }
 }

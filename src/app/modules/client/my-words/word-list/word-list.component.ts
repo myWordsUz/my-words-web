@@ -1,5 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
+type OrderType = 'byDate' | 'byAlphabet';
 @Component({
   selector: 'mw-word-list',
   templateUrl: './word-list.component.html',
@@ -150,7 +151,14 @@ export class WordListComponent implements OnInit {
       ],
     },
   ];
+
+  visibleOrderType = false;
+  orderType: OrderType = 'byDate';
   constructor() {}
 
   ngOnInit(): void {}
+
+  changeOrderType(orderType: OrderType) {
+    // TODO Logic
+  }
 }

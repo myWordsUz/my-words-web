@@ -14,6 +14,7 @@ import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
 
 @NgModule({
   declarations: [AuthorizationComponent, SignInComponent, SignUpComponent],
@@ -29,6 +30,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     NzCheckboxModule,
     NzGridModule,
     NzSelectModule,
+    NzLayoutModule,
   ],
 })
 export class AuthorizationModule {}

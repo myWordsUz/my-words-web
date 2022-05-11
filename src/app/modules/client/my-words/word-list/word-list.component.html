@@ -1,6 +1,6 @@
 <div class="pb-1">
   <nz-input-group [nzSuffix]="suffixIconSearch">
-    <input type="text" nz-input placeholder="input search text" />
+    <input type="text" nz-input placeholder="book ..." />
   </nz-input-group>
   <ng-template #suffixIconSearch>
     <i nz-icon nzType="search"></i>
@@ -9,10 +9,26 @@
 <div class="inner-content">
   <div class="header">
     <h3>142 so'z</h3>
-    <a>
+    <a
+      nz-popover
+      [nzPopoverContent]="contentTemplate"
+      nzPopoverPlacement="bottom"
+      [(nzPopoverVisible)]="visibleOrderType"
+      nzPopoverTrigger="click"
+    >
       Tartiblash
       <img src="./assets/images/order.svg" />
     </a>
+
+    <ng-template #contentTemplate>
+      <nz-radio-group
+        [(ngModel)]="orderType"
+        (ngModelChange)="changeOrderType($event)"
+      >
+        <label nz-radio nzValue="byDate">Sana bo’yicha</label>
+        <label nz-radio nzValue="byAlphabet">Alfavit bo’yicha</label>
+      </nz-radio-group>
+    </ng-template>
   </div>
 
   <div class="body">
@@ -72,6 +88,7 @@
     nzType="primary"
     nzShape="circle"
     class="inner-content__float-btn"
+    routerLink="add"
   >
     <i nz-icon nzType="plus"></i>
   </button>

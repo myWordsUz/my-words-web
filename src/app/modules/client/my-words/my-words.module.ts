@@ -14,6 +14,9 @@ import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzRadioModule } from 'ng-zorro-antd/radio';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { AddTranslationTypeComponent } from './add-translation-type/add-translation-type.component';
+import { NzPopoverModule } from 'ng-zorro-antd/popover';
+import { FormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,11 @@ import { AddTranslationTypeComponent } from './add-translation-type/add-translat
   imports: [
     CommonModule,
     MyWordsRoutingModule,
+
+    FormsModule,
+
+    SharedModule,
+
     NzInputModule,
     NzIconModule,
     NzGridModule,
@@ -33,6 +41,7 @@ import { AddTranslationTypeComponent } from './add-translation-type/add-translat
     NzFormModule,
     NzRadioModule,
     NzModalModule,
+    NzPopoverModule,
   ],
 })
 export class MyWordsModule {}
